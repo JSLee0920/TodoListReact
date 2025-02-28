@@ -1,38 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoWrapper {
+  background: rgba(40, 40, 60, 0.9);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  backdrop-filter: blur(10px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoForm {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  flex: 1;
+  outline: none;
+  background: none;
+  border: 2px solid #5d5d79;
+  padding: 0.6rem;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: border 0.3s ease-in-out;
+}
+
+.todo-input::placeholder {
+  color: #aaaaaa;
+}
+
+.todo-input:focus {
+  border: 2px solid #8758ff;
+}
+
+.todo-btn {
+  background: #8758ff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.todo-btn:hover {
+  background: #6c3ff0;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(80, 80, 120, 0.5);
+  color: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.Todo:hover {
+  transform: translateY(-3px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-text {
+  flex: 1;
+  text-align: left;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.75rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.edit-icon:hover {
+  color: #8758ff;
+}
+
+.delete-icon:hover {
+  color: #f84b4b;
 }
